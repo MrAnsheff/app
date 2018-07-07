@@ -5,13 +5,21 @@ main() {
 }
 
 class MyApp extends StatelessWidget {
-  build(context) {
+  @override
+  Widget build(context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('EasyList'),
-        ),
-      ),
+          appBar: AppBar(
+            title: Text('EasyList'),
+          ),
+          body: Card(
+            child: Column(
+              children: <Widget>[
+                Image.asset('assets/food.jpg'),
+                Text('Food Paradise')
+              ],
+            ),
+          )),
     );
   }
 }
