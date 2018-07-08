@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 
+import './products_manager.dart';
+
 main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-    State<StatefulWidget> createState() {
-      // TODO: implement createState
-      return _MyAppState();
-    }
-}
+class MyApp extends StatelessWidget {
 
-class _MyAppState extends State<MyApp>{
   @override
   Widget build(context) {
     return MaterialApp(
@@ -20,24 +15,7 @@ class _MyAppState extends State<MyApp>{
         appBar: AppBar(
           title: Text('EasyList'),
         ),
-        body: Column(children: [
-          Container(
-            margin: EdgeInsets.all(20.0),
-            child: RaisedButton(
-            onPressed: (){},
-            child: Text('Rised Button'),
-            ),
-          ),
-
-          Card(
-            child: Column(
-              children: <Widget>[
-                Image.asset('assets/food.jpg'),
-                Text('Food Paradise')
-              ],
-            ),
-          )
-        ]),
+        body: ProductManager(),
       ),
     );
   }
